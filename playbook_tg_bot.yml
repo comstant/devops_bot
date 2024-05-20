@@ -1,4 +1,4 @@
-- name: base_db
+- name: initialisation
   hosts: all
   become: yes
   tasks:
@@ -237,7 +237,7 @@
 
     - name: get a git repository
       git:
-        repo: https://github.com/comstant/devops_bot/bot
+        repo: https://github.com/comstant/devopsbot
         dest: etc/ComstantBot
         version: main
 
