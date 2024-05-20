@@ -1,0 +1,20 @@
+CREATE USER repl_user REPLICATION LOGIN PASSWORD '123';
+
+CREATE DATABASE db_base_2;
+
+\connect db_base_2;
+
+CREATE TABLE IF NOT EXISTS Emails (
+ID SERIAL PRIMARY KEY,
+Emails VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Phones (
+ID SERIAL PRIMARY KEY,
+Phone VARCHAR(255) NOT NULL
+);
+
+INSERT INTO Emails(Emails) VALUES('pt.test1@alex-it.ru');
+INSERT INTO Emails(Emails) VALUES('alexsuper@kaka.ru');
+INSERT INTO phones(Phone) VALUES('88005553535');
+INSERT INTO phones(Phone) VALUES('+7(999)-777-66-22');
